@@ -22,16 +22,17 @@ public class ReviewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_review);
 
         EditText bookTitleEditText = findViewById(R.id.bookTitleEditText);
-        EditText authorEditText = findViewById(R.id.authorEditText); // 새로운 작가 입력 필드
+        EditText authorEditText = findViewById(R.id.authorEditText);
         RatingBar ratingBar = findViewById(R.id.ratingBar);
         Switch favoriteSwitch = findViewById(R.id.favoriteSwitch);
         EditText reviewEditText = findViewById(R.id.reviewEditText);
         Button closeButton = findViewById(R.id.closeButton);
         Button saveButton = findViewById(R.id.saveButton);
 
+
         closeButton.setOnClickListener(v -> {
             bookTitleEditText.setText("");
-            authorEditText.setText(""); // 새로운 필드 초기화
+            authorEditText.setText("");
             ratingBar.setRating(0);
             favoriteSwitch.setChecked(false);
             reviewEditText.setText("");
@@ -41,7 +42,7 @@ public class ReviewActivity extends AppCompatActivity {
 
         saveButton.setOnClickListener(v -> {
             String bookTitle = bookTitleEditText.getText().toString().trim();
-            String author = authorEditText.getText().toString().trim(); // 새로운 필드 값 가져오기
+            String author = authorEditText.getText().toString().trim();
             float rating = ratingBar.getRating();
             boolean isFavorite = favoriteSwitch.isChecked();
             String review = reviewEditText.getText().toString().trim();

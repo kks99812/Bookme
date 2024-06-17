@@ -33,7 +33,6 @@
             android:textStyle="bold"
             android:gravity="center"/>
 
-
     </LinearLayout>
 
     <LinearLayout
@@ -62,7 +61,6 @@
             android:gravity="center"
             android:textSize="20dp"
             android:textStyle="bold" />
-
 
     </LinearLayout>
 
@@ -97,7 +95,6 @@
 
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/reviewTextView"
         android:layout_width="match_parent"
@@ -109,13 +106,32 @@
         android:textColor="@android:color/black"
         android:textStyle="bold" />
 
-    <!-- Close Button -->
-    <Button
-        android:id="@+id/closeButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="닫기"
-        android:layout_gravity="start"
-        android:background="@color/button_background"
-        android:textColor="@color/button_text"/>
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닫기"
+            android:layout_gravity="start"
+            android:background="@color/button_background"
+            android:textColor="@color/button_text"/>
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="삭제"
+            android:layout_gravity="start"
+            android:background="@color/button_background"
+            android:textColor="@color/button_text"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
+
 </LinearLayout>
+
