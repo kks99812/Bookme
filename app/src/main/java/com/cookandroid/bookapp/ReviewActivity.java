@@ -56,7 +56,7 @@ public class ReviewActivity extends AppCompatActivity {
                 Set<String> titles = sharedPreferences.getStringSet("titles", new HashSet<>());
                 titles.add(bookTitle);
                 editor.putStringSet("titles", titles);
-                editor.putString(bookTitle + "_author", author); // 작가 정보 저장
+                editor.putString(bookTitle + "_author", author);
                 editor.putFloat(bookTitle + "_rating", rating);
                 editor.putBoolean(bookTitle + "_favorite", isFavorite);
                 editor.putString(bookTitle + "_review", review);
